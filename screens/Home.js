@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Dimensions, ScrollView } from 'react-native';
+import { StyleSheet, Dimensions, ScrollView, Text } from 'react-native';
 import { Block, theme } from 'galio-framework';
 
 import { Card } from '../components';
@@ -28,7 +28,8 @@ class Home extends React.Component {
   render() {
     return (
       <Block flex center style={styles.home}>
-        {this.renderArticles()}
+        {/* {this.renderArticles()} */}
+        <Text>Anjali</Text>
       </Block>
     );
   }

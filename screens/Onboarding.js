@@ -32,27 +32,18 @@ class Onboarding extends React.Component {
         <Block flex space="between" style={styles.padded}>
             <Block flex space="around" style={{ zIndex: 2 }}>
               <Block style={styles.title}>
-                <Block>
-                  <Text color="white" size={60}>
-                    Design
+                <Block center>
+                  <Text color="white" size={35}>
+                    Investro_App
                   </Text>
                 </Block>
-                <Block>
-                  <Text color="white" size={60}>
-                    System
-                  </Text>
-                </Block>
-                <Block style={styles.subTitle}>
-                  <Text color="white" size={16}>
-                    Fully coded React Native components.
-                  </Text>
-                </Block>
+                
               </Block>
               <Block center>
                 <Button
                   style={styles.button}
                   color={argonTheme.COLORS.SECONDARY}
-                  onPress={() => navigation.navigate("App")}
+                  onPress={() => navigation.navigate("Register")}
                   textStyle={{ color: argonTheme.COLORS.BLACK }}
                 >
                   Get Started
