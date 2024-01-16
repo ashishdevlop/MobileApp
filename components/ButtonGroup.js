@@ -24,8 +24,8 @@ const styles = {
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginVertical: 20,
-        marginRight: 140,
-        marginLeft: 20,
+        marginRight: 90,
+        marginLeft: 30,
       },
       button: {
       // flex: 1,
@@ -39,7 +39,7 @@ const styles = {
       //   //color:'blue',
       //justifyContent: 'space-between',
         padding: 10,
-      //   paddingHorizontal:2,
+        // paddingHorizontal:2,
 
       //   //marginStart: 10,
       //   //marginEnd: 40,

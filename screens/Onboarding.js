@@ -34,9 +34,20 @@ class Onboarding extends React.Component {
               <Block style={styles.title}>
                 <Block center>
                   <Text color="white" size={35}>
-                    Investro_App
+                    Investro App
                   </Text>
+                  
                 </Block>
+                {/* <Block style={styles.subTitle}>
+                <Text color="white" size={16}>
+                  All rights are reserved to the company
+                </Text>
+              </Block> */}
+              <Block style={styles.subTitle}>
+                <Text color="white" size={16}>
+                  All rights are reserved to the company
+                </Text>
+              </Block>
                 
               </Block>
               <Block center>
@@ -68,9 +79,11 @@ const styles = StyleSheet.create({
   },
   button: {
     width: width - theme.SIZES.BASE * 4,
-    height: theme.SIZES.BASE * 3,
+    height: theme.SIZES.BASE * 4,
     shadowRadius: 0,
-    shadowOpacity: 0
+    shadowOpacity: 0,
+    // marginTop: 140,
+    // backgroundColor:"blue"
   },
   logo: {
     width: 200,
@@ -83,7 +96,7 @@ const styles = StyleSheet.create({
     marginTop:'-5%'
   },
   subTitle: {
-    marginTop: 20
+    marginTop: 250
   }
 });
 

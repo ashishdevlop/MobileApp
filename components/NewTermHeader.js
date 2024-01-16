@@ -3,7 +3,7 @@ import {View, Text,StyleSheet, TouchableOpacity} from 'react-native';
 import { argonTheme } from '../constants';
 import { AntDesign } from '@expo/vector-icons';
 
-const NeftyHeader = ({title,subtitle,leftIcon,onIconPress}) => {
+const NewTermHeader = ({title,subtitle,leftIcon,onIconPress}) => {
     return (
        
             <View style={styles.header}>
@@ -14,8 +14,8 @@ const NeftyHeader = ({title,subtitle,leftIcon,onIconPress}) => {
             )}
            
             <View>
-        <Text style={styles.title}>NIFTY50 <Text style={{ color: 'green' }}> UP</Text></Text>
-        <Text style={styles.subtitle}>38m 18s LEFT</Text>
+        <Text style={styles.title}>TermsAndCondition </Text>
+        {/* <Text style={styles.subtitle}>Guide</Text> */}
         </View>
       </View> 
     );
@@ -36,15 +36,15 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color:'white',
       },
-      subtitle: {
-        textAlign: 'center',
-        alignItems:'center',
-        marginLeft:"15%",
+    //   subtitle: {
+    //     textAlign: 'center',
+    //     alignItems:'center',
+    //     marginLeft:"15%",
 
-        fontSize: 16,
-        color:'white',
+    //     fontSize: 16,
+    //     color:'white',
 
-      },
+    //   },
 })
 
-export default NeftyHeader;
+export default NewTermHeader;

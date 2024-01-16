@@ -3,6 +3,7 @@ import React , {useState} from 'react';
 import { StyleSheet, Text, View, FlatList, TouchableOpacity, Button , ScrollView} from 'react-native';
 import NeftyHeader from '../components/NeftyHeader';
 import FilterOptions from '../components/FilterOptions';
+import { Ionicons } from '@expo/vector-icons'; 
 const ContestScreen = () => {
   const navigation = useNavigation();
 const title="NIFTY50"
@@ -14,16 +15,20 @@ const title="NIFTY50"
     },
     // Add more session data here
   ];
-  const handleContestsPress = () => {
+  const handleMyContestsPress = () => {
     // Handle the 'Contests' press
+    navigation.goBack();
+ 
   };
   
-  const handleMyContestsPress = () => {
+  const handleContestsPress = () => {
     // Handle the 'My Contests' press
+   
   };
   
   const handleMyBasketsPress = () => {
     // Handle the 'My Baskets' press
+    navigation.navigate('NewStockScreen');
   };
 
   const contest = [
@@ -71,7 +76,7 @@ const title="NIFTY50"
   };
   //filter options
   const [selectedOption, setSelectedOption] = useState('Option 1');
-  const options = ['Entry', 'Spots', 'Prize Pool', '%Winnings'];
+  const options = ['Entry', 'Spots', 'Prize Pool', '%Winnings',<Ionicons name="filter" size={24} color="black" />];
 
   const handleOptionChange = (newOption) => {
     setSelectedOption(newOption); }
@@ -82,6 +87,10 @@ const title="NIFTY50"
   const handleTabSelect = (tabName) => {
     setSelectedTab(tabName);
   };
+
+  // const handleContest = () => {
+  //    navigation.navigate('Contestes');
+  // };
 
 const onIconTouch=()=>{
   navigation.goBack();
@@ -173,13 +182,26 @@ const onIconTouch=()=>{
         <View style={styles.content}>
           {/* Completed content */}
           <Text style={styles.live}>My Contests</Text>
+          <Text style={styles.upcomingTitle}>You haven't joined a contest yet.</Text>
+          <Text style={styles.upcomingSubtitle}>Find a contest to join and start winning</Text>
+
+          <TouchableOpacity style={styles.viewUpcomingButton} onPress={ handleMyContestsPress}>
+            <Text style={styles.viewUpcomingButtonText}>JOIN A CONTEST</Text>
+          </TouchableOpacity>
           {/* Add your completed sessions content here */}
+          
         </View>
       )}
       {selectedTab === 'My Basket' && (
         <View style={styles.content}>
           {/* Completed content */}
           <Text style={styles.live}>My Basket Content here</Text>
+          <Text style={styles.upcomingTitle}>You haven't joined a Basket yet.</Text>
+          <Text style={styles.upcomingSubtitle}>Find a contest to join and start winning</Text>
+
+          <TouchableOpacity style={styles.viewUpcomingButton} onPress={handleMyBasketsPress}>
+            <Text style={styles.viewUpcomingButtonText}>JOIN A BASKET</Text>
+          </TouchableOpacity>
           {/* Add your completed sessions content here */}
         </View>
       )}
@@ -296,6 +318,29 @@ const styles = StyleSheet.create({
     //flex: 1,
    // padding: 0,
   }
+  , upcomingTitle: {
+    fontSize: 20,
+    color: '#666',
+    //marginBottom: 5,
+  },
+  upcomingSubtitle: {
+    fontSize: 16,
+    color: '#666',
+    marginBottom: 20,
+  },
+  viewUpcomingButton: {
+    backgroundColor: 'blue',
+    padding: 10,
+    borderRadius: 1,
+    marginBottom:"50%",
+    marginLeft:10,
+    marginRight:10,
+  },
+  viewUpcomingButtonText: {
+    color: 'white',
+    fontSize: 18,
+    textAlign: 'center',
+  },
 });
 
 export default ContestScreen;

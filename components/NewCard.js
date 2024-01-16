@@ -9,7 +9,7 @@ const NewCard = () => {
   const [sessions, setSessions] = useState([
     {
       market: 'NIFTY50',
-      timer: '4h 9m',
+      timer: '4h9m',
       format: 'UP',
       duration: '30 minutes',
       timeLeft: '1:30 PM',
@@ -19,7 +19,7 @@ const NewCard = () => {
     },
     {
       market: 'NIFTY51',
-      timer: '6h 3m',
+      timer: '6h3m',
 
       format: 'UP',
       duration: '30 minutes',
@@ -30,7 +30,7 @@ const NewCard = () => {
     },
     {
       market: 'DOW30',
-      timer: '8h 3m',
+      timer: '8h3m',
 
       format: 'UP',
       duration: '30 minutes',
@@ -81,7 +81,7 @@ const NewCard = () => {
           <Text style={styles.date}>{item.date}</Text>
         </View>
       </View>
-      <View style={styles.Price}>
+      <View style={styles.Price}> 
       <Text style={styles.text} >
          {item.price}
       </Text>
@@ -116,12 +116,20 @@ const NewCard = () => {
     elevation: 4,
   },
   timer:{
-    marginLeft: 134,
-    marginRight: 134,
-    borderEndWidth:0.2,
-    paddingLeft:2,
-    paddingRight:2,
-borderColor:'gray',
+
+      fontSize: 20,
+      textAlign: "center",
+      marginBottom: 18,
+      fontWeight:'bold',
+    // marginLeft: 150,
+    // marginRight: 110,
+    // borderEndWidth:0.2,
+    // flexDirection: 'row',
+    // fontSize:9,
+    // paddingLeft:1,
+    // paddingRight:1,
+    // textAlign:"center",
+    // borderColor:'gray',
 //borderLeftWidth:0.2,
 //borderRightWidth:0.2,
 //borderBottomWidth:0.2,
@@ -159,7 +167,7 @@ borderColor:'gray',
   },
   row:{
 
-flexDirection:'row',
+    flexDirection:'row',
 
   },
   marketTitle: {
@@ -171,8 +179,8 @@ flexDirection:'row',
     
   },
   images:{
-height: 10,
-width: 25,
+    height: 10,
+    width: 25,
 
   },
   images1:{
@@ -188,18 +196,21 @@ width: 25,
     color: 'green',
   },
   timeLeft: {
-    fontSize: 20,
-    padding:5,
+    fontSize: 15,
+    // padding:3,
     fontWeight: 'bold',
   },
   timeRight: {
-    fontSize: 20,
-    padding: 5,
+    fontSize: 15,
+    // padding: 4,
     fontWeight: 'bold',
   },
   date: {
     fontSize: 15,
-    padding:6,
+    // marginLeft:15,
+    // marginRight:15,
+    // padding:5,
+    fontWeight:'bold',
   },
   Price: {
     alignItems:'center',
@@ -221,7 +232,7 @@ width: 25,
     color:'red',
     fontSize: 15,
     fontWeight: 'bold',
-    marginTop:15,
+    marginTop:10,
     textAlign: 'center',
     alignItems:'center',
     justifyContent: 'center',

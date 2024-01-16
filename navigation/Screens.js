@@ -26,9 +26,39 @@ import SelectedStocksScreen from "../screens/NextSelection";
 import EnterAmountScreen from "../screens/EnterAmount";
 import PaymentOptionsScreen from "../screens/Payment";
 import PaymentSuccessScreen from "../screens/PaymentSuccess";
+import FantasyPointsScreen from "../screens/FantasyPointsScreen";
+import NewCouponScreen from "../screens/NewCouponScreen";
+import NewTermScreen from "../screens/NewTermScreen";
+import NewHelpScreen from "../screens/NewHelpScreen";
+
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createStackNavigator } from "@react-navigation/stack";
+import NewTrendScreen from "../screens/NewTrendScreen";
+import KycScreen from "../screens/KycScreen";
+import VerifyScreen from "../screens/VerifyScreen";
+import NewEntryProfile from "../screens/NewEntryProfile";
+import NewAddCash from "../screens/NewAddCash";
+import NewShare from "../screens/NewShare";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import FantansyPoint from "../screens/FantansyPoint";
+// Help
+// FantasyPointsScreen
 
 const { width } = Dimensions.get("screen");
 
@@ -228,8 +258,33 @@ export default function OnboardingStack(props) {
       <Stack.Screen name="NewHomeScreen" component={NewHomeScreen} />
       <Stack.Screen name="MySession" component={MySession} />
       <Stack.Screen name="LearnScreen" component={LearnScreen} />
+      <Stack.Screen name="FantasyPointsScreen" component={FantasyPointsScreen} />
+      <Stack.Screen name="NewHelpScreen" component={NewHelpScreen} />
+      <Stack.Screen name="NewCouponScreen" component={NewCouponScreen} />
+      <Stack.Screen name="NewTermScreen" component={NewTermScreen} />
+      <Stack.Screen name="NewTrendScreen" component={NewTrendScreen} />
+      <Stack.Screen name="NewEntryProfile" component={NewEntryProfile} />
+      <Stack.Screen name="NewAddCash" component={NewAddCash} />
+      <Stack.Screen name="NewShare" component={NewShare} />
+
+    
+      
+
+      
+      
+      
+      
+   
+      
 
 
+      
+     
+  
+  
+      {/* <Stack.Screen name="NewInviteScreen" component={NewInviteScreen} /> */}
+      <Stack.Screen name="VerifyScreen" component={VerifyScreen} />
+      <Stack.Screen name="KycScreen" component={KycScreen} />
       <Stack.Screen name="ContestScreen" component={ContestScreen} />
       <Stack.Screen name="EntryScreen" component={EntryScreen} />
       <Stack.Screen name="NewStockScreen" component={NewStockScreen} />
